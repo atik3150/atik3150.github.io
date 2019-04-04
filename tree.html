@@ -1,0 +1,262 @@
+<html>
+<head>
+
+
+
+<style>
+body {
+    font-family: Arial;
+    background-image: url("./new.png");
+    background-repeat:no-repeat;
+	    background-size:cover;
+    
+}
+
+ul.tree li {
+    list-style-type: none;
+    position: relative;
+    margin: 10px 0;
+    
+}
+
+ul.tree li ul {
+    display: none;
+    
+}
+
+ul.tree li.open > ul {
+    display: block;
+    
+}
+
+ul.tree li a {
+    color: black;
+    text-decoration: none;
+    
+}
+
+ul.tree li a:before {
+    height: 1em;
+    padding:0 .1em;
+    font-size: .8em;
+    display: block;
+    position: absolute;
+    left: -1.3em;
+    top: .2em;
+    
+}
+
+ul.tree li > a:not(:last-child):before {
+    content: '+';
+    
+}
+
+ul.tree li.open > a:not(:last-child):before {
+    content: '-';
+    
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<br/>
+
+
+<h3><b>Request Area</b></h3>
+
+
+
+<ul class="tree">
+	  <li><a href="#">I'm working with Claim data</a>
+    		<ul>
+      			<li><a href="#">Issue with Claim pricing</a>
+        		<ul>
+				<li><a href="#">Unable to process claim due to edit</a>	
+					<ul>
+						<li><a href="./index.htm" onclick="location.href=this.href+'?key=UNKNOWN PRICER ERROR 41';return false;"><font color = "#8B008B">UNKNOWN PRICER ERROR 41</font></a></li>
+          					<li><a href="./index.htm" onclick="location.href=this.href+'?key=REVIEW CONTRACT COMMENTS';return false;"><font color = "#8B008B">REVIEW CONTRACT COMMENTS</font></a></li>
+          					<li><a href="./index.htm" onclick="location.href=this.href+'?key=PPO RECORD NOT FOUND';return false;"><font color = "#8B008B">PPO RECORD NOT FOUND</font></a></li>
+					</ul>
+				</li>
+			</ul>
+			</li>
+			
+			<li><a href="#">Issue with RMSO Edit</a>
+        		<ul>
+				
+				<li><a href="./index.htm" onclick="location.href=this.href+'?key=RMSO UNKNOWN ERROR';return false;"><font color = "#8B008B">Claims Hitting 'RMSO UNKNOWN ERROR'</font></a></li>
+          			<li><a href="./index.htm" onclick="location.href=this.href+'?key=RMSO Multiple Records Found';return false;"><font color = "#8B008B">Claims Hitting 'RMSO Multiple Records Found'</font></a></li>
+         				
+				
+			</ul>
+			</li>
+
+			<li><a href="#">Issue with Provider Payment</a>
+        		<ul>
+				<li><a href="#">Incorrect rates applied</a>	
+					<ul>
+						<li><a href="./index.htm" onclick="location.href=this.href+'?key=Incorrect Contract Line Item and Qualifier Id';return false;"><font color = "#8B008B">Incorrect Contract Line Item and Qualifier Id</font></a></li>
+          					<li><a href="./index.htm" onclick="location.href=this.href+'?key=EPDB Product Code mismatch on PD Screen';return false;"><font color = "#8B008B">EPDB Product Code mismatch on PD Screen</font></a></li>
+          					<li><a href="./index.htm" onclick="location.href=this.href+'?key=SCSR not applying correct rates on service';return false;"><font color = "#8B008B">SCSR not applying correct rates on service</font></a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">Claim overpayment</a>	
+					<ul>
+						<li><a href="#"><font color = "#8B008B">Sub-item 1</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 2</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 3</font></a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">Incorrect Coverage Code</a>	
+					<ul>
+						<li><a href="#"><font color = "#8B008B">Sub-item 1</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 2</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 3</font></a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">Incorrect EOB Generated</a>	
+					<ul>
+						<li><a href="#"><font color = "#8B008B">Sub-item 1</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 2</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 3</font></a></li>
+					</ul>
+				</li>
+			</ul>
+			</li>
+
+
+			<li><a href="#">Need Update in Control Suffix</a>	
+					<ul>
+						<li><a href="#"><font color = "#8B008B">Sub-item 1</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 2</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 3</font></a></li>
+					</ul>
+			</li>
+
+
+			<li><a href="#">Need Update in Rate Schedule</a>	
+					<ul>
+						<li><a href="#"><font color = "#8B008B">Sub-item 1</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 2</font></a></li>
+          					<li><a href="#"><font color = "#8B008B">Sub-item 3</font></a></li>
+					</ul>
+			</li>
+
+		</ul>
+	</li>
+
+  <li><a href="#">Part 2</a>
+    <ul>
+      <li><a href="#">Item A</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item B</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item C</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item D</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item E</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li><a href="#">Part 3</a>
+    <ul>
+      <li><a href="#">Item A</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item B</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item C</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item D</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item E</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<script type = "text/javascript">
+
+var tree = document.querySelectorAll('ul.tree a:not(:last-child)');
+for(var i = 0; i < tree.length; i++){
+    tree[i].addEventListener('click', function(e) {
+        var parent = e.target.parentElement;
+        var classList = parent.classList;
+        if(classList.contains("open")) {
+            classList.remove('open');
+            var opensubs = parent.querySelectorAll(':scope .open');
+            for(var i = 0; i < opensubs.length; i++){
+                opensubs[i].classList.remove('open');
+            }
+        } else {
+            classList.add('open');
+        }
+        e.preventDefault();
+    });
+}
+
+</script>
+
+</body>
+</html>

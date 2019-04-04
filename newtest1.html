@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        body
+        {
+            font-family: Arial;
+            font-size: 10pt;
+	    background-image: url("./new.png");
+		background-repeat:no-repeat;
+	    background-size:cover;
+        }
+    </style>
+</head>
+
+<body>
+<br/>
+<br/>
+
+<center><h1><font color = "#4B0082"> Ticket created Successfully</font></h1></center>
+
+<table align = center cellpadding="10px">
+
+<tr><td height="40" colspan="2" align=left>
+                    <div class="headbox" ><b>Request</b></div></td>
+		    <td><div class="headbox" ><b>:     </b></div></td>
+                    <td align=left> <div class="headbox"  ><label id=requestno > </label></div> </td>
+
+                </tr>
+
+<tr><td height="40" colspan="2" align=left>
+                    <div class="headbox1" ><b>Request Item</b></div></td>
+		    <td><div class="headbox" ><b>:    </b></div></td>
+                    <td align=left> <div class="headbox1"  ><label id=ritem > </label></div> </td>
+
+                </tr>
+
+<tr><td height="40" colspan="2" align=left>
+                    <div class="headbox2" ><b>ETA</b></div></td>
+		    <td><div class="headbox" ><b>:    </b></div></td>
+                    <td align=left> <div class="headbox2"  ><label id=etanew > </label></div> </td>
+
+                </tr>
+
+<tr><td height="40" colspan="2" align=left>
+                    <div class="headbox3" ><b>Assigned to queue</b></div></td>
+		    <td><div class="headbox" ><b>:    </b></div></td>
+                    <td align=left> <div class="headbox3"  ><label id=queue > </label></div> </td>
+
+                </tr>
+
+</table>
+
+<br/>
+
+<br/>
+
+<center><h4><font color = "#4B0082"> Do you want to submit another ticket ?</font></h4></center>
+
+
+<table align = center cellpadding="15px"> 
+
+<tr>
+
+<td height="40" colspan="2" align=left>
+
+	<input type="button" onclick="gotoHome()" value="Yes" style="width: 60px;">
+</td>
+
+
+<td height="40" colspan="2" align=right>
+
+        <input type="button" onclick="closeWin()" value="No" style="width: 60px;">
+</td>
+
+</tr>
+
+</table>
+
+
+<br/>
+
+<br/>
+
+<marquee><font color = "red"><b>NOTE :- ETA provided is only for demo purpose. Original ETA may differ.</b></font></marquee>
+
+
+<script type = "text/javascript">
+
+function requestNo(){
+
+    var count = localStorage.getItem("count")==null?1:localStorage.getItem("count");
+    count=Number(count)+1;
+    localStorage.setItem("count", count);
+    document.getElementById('requestno').innerHTML = "REQ0000" + count;
+
+    var count1 = localStorage.getItem("count1")==null?1:localStorage.getItem("count1");
+    count1=Number(count1)+1;
+    localStorage.setItem("count1", count1);
+    document.getElementById('ritem').innerHTML = "RITM0000" + count1;
+
+}
+ 
+window.onload = function(){
+    requestNo()
+};
+
+function getQueryVariable(variable) {
+var query = window.location.search.substring(1)
+var vars = query.split("&");
+var fname = "";
+for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=")
+    if(pair[0] == variable){
+        if(pair[1].indexOf('%20') != -1){
+            console.log(pair[1].indexOf('%20'))
+            var fullName = pair[1].split('%20')
+            console.log(fullName)
+
+		for (var i=0;i<fullName.length;i++) {
+			fname = fname + fullName[i] + ' ';
+		}
+
+
+            return fname;
+		
+        }
+        else {
+            return pair[1];
+        }
+    }
+}
+return(false)
+}
+
+var eta = getQueryVariable("eta");
+var queue = getQueryVariable("queue");
+
+document.getElementById('etanew').innerHTML = eta;
+document.getElementById('queue').innerHTML = queue;
+
+
+function gotoHome(){
+
+	window.location.href = "./index.htm";
+
+}
+
+
+
+
+function closeWin(){
+
+	window.location.href = "./Thankyou.html";
+	
+}
+
+</script>
+
+</body>
+</html>
